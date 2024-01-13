@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "NeueHaasDisplayLight";
+  src: url(./assets/NeueHaasDisplayLight.ttf);
+}
+@font-face {
+  font-family: "NeueHaasDisplayMediu";
+  src: url(./assets/NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+  font-family: "NeueHaasDisplayRoman";
+  src: url(./assets/NeueHaasDisplayRoman.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NeueHaasDisplayMediu";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #efe9e3;
+}
+/* ---------------- Page-1 ---------------- */
+.page1 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+.page1 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  height: 100px;
+  width: 100%;
+}
+.page1 nav .nav-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+.page1 nav .nav-btns h4 {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 50px;
+  color: #000;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.page1 nav .nav-btns h4::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -100%;
+  background-color: black;
+  border-radius: 50%;
+  transition: all ease-in 0.25s;
+}
+.page1 nav .nav-btns h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+  transition: all ease-out 0.2s;
+}
+.page1 nav .nav-btns h4 a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  z-index: 1;
+  font-family: "NeueHaasDisplayRoman";
+  font-weight: 400;
+}
+.page1 nav .nav-btns h4:hover a {
+  color: white;
+}
+.page1 .center {
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 9.625em;
+  padding-bottom: 3.75em;
+  display: flex;
+  position: relative;
+}
+.page1 .center .left {
+}
+.page1 .center .left h3 {
+  letter-spacing: -0.03em;
+  font-size: 32.5px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+.page1 .center .right {
+}
+.page1 .center .right h1 {
+  z-index: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-size: 185.714px;
+  font-weight: 500;
+  line-height: 148.571px;
+  position: relative;
+  text-align: right;
+}
+.page1 .vid {
+  z-index: 3;
+  width: 100%;
+  margin-top: 3.75em;
+  /* position: relative; */
+}
+.page1 .vid video {
+  overflow: hidden;
+  border-radius: 1.25em;
+  width: 100.1%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+#hero-shape {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  top: 68vh;
+  right: 0;
+  z-index: 1;
+}
+#hero-shape #shape-1 {
+  background-color: #fe330a;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#hero-shape #shape-2 {
+  background-color: #fe330a;
+  border-radius: 50%;
+  filter: blur(25px);
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  animation: AnimationShape2 3s linear alternate infinite;
+}
+#hero-shape #shape-3 {
+  /* background-color: orangered; */
+  background: linear-gradient(219deg, #ff7231, #fe330a 73%);
+  border-radius: 50%;
+  filter: blur(25px);
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  animation: AnimationShape1 3s linear alternate infinite;
+}
+@keyframes AnimationShape1 {
+  from {
+    transform: translate(55%, -3%) rotate(30deg);
+  }
+  to {
+    transform: translate(0%, 10%) rotate(0deg);
+  }
+}
+@keyframes AnimationShape2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+
+  to {
+    transform: translate(-20%, 30%);
+  }
+}
+/* ---------------- Page-2 ---------------- */
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 2vw;
+}
+.page2 .moving-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page2 .moving-text .con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.page2 .moving-text .con h1 {
+  font-size: 8.75em;
+  display: inline-block;
+}
+.page2 .moving-text .con .circle {
+  width: 3.75em;
+  height: 3.75em;
+  background-color: #fe330a;
+  border-radius: 100vw;
+  margin-left: 1.75em;
+  margin-right: 1.75em;
+}
