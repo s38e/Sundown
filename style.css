@@ -471,7 +471,7 @@ body {
 .fixed-img {
   height: 550px;
   width: 430px;
-  /* background-color: red; */
+  background-color: transparent;
   border-radius: 15px;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -482,10 +482,16 @@ body {
   background-position: center;
   overflow: hidden;
   background-size: cover;
+  box-shadow: 0 0 100px 0 rgb(254, 50, 10, 0.3);
 }
 .fixed-img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: none;
+}
+footer {
+  height: 60px;
+  width: 100%;
+  /* background-color: red; */
 }
