@@ -1,6 +1,12 @@
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".main"),
-  smooth: true,
+// انتظر حتى يتم تحميل المستند بشكل كامل ثم قم بتشغيل LocomotiveScroll
+window.addEventListener("load", () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector(".main"),
+    smooth: true,
+    // يمكنك إضافة المزيد من الخيارات هنا وفقًا لاحتياجات تطبيقك
+  });
+
+  scroll.init();
 });
 
 const featuredList = document.querySelector(".featured_list");
